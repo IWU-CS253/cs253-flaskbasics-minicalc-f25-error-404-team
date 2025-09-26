@@ -5,3 +5,17 @@ def average_length(user_string):
     else:
         avg = 0
     return avg
+
+def char_count(user_string):
+    chars = 0
+    for c in user_string:
+        chars = chars + 1
+    return chars
+def word_count(user_string):
+    words = len(user_string.split(' '))
+    return words
+
+def hex(user_string: str):
+    bytes = user_string.encode("utf-8")
+    hex = bytes.hex()
+    return hex
