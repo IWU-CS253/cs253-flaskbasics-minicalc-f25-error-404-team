@@ -2,18 +2,17 @@
 
 {% block content %}
 <h2>Word Stats</h2>
-    <div>
-        <form action="/wordstats" method="post">
-            <label for="user_string">Enter your string:</label>
-            <input type="text" id="user_string" name="user_string" required>
-            <input type="submit" value="Calculate">
-        </form>
-        <form action="/hex" method="post">
-            <label for="user_string">Enter your string:</label>
-            <input type="text" id="user_string" name="user_string" required>
-            <input type="submit" value="Convert to Hex">
-        </form>
-    </div>
+    <form action="/wordstats" method="post">
+        <label for="user_string">Enter your string:</label>
+        <input type="text" id="user_string" name="user_string" required>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <form action="/hex" method="post">
+        <label for="user_string">Enter your string:</label>
+        <input type="text" id="user_string" name="user_string" required>
+        <input type="submit" value="Convert to Hex">
+    </form>
 
     {% if average_length %}
         <p>Average word length: {{ average_length }}</p>
