@@ -18,9 +18,16 @@
         <p>Average word length: {{ average_length }}</p>
     {% endif %}
 
-    {%  if hex %}
-        <p>Word in hex: {{ hex }}</p>
+    {% if char_count %}
+        <p>The character count: {{char_count}}</p>
     {% endif %}
 
+    {% if word_count %}
+        <p>The word count: {{word_count}}</p>
+    {% endif %}
+
+    {% if hex %}
+        <p>Word in hex: {{ hex }}</p>
+    {% endif %}
 
 {% endblock %}
