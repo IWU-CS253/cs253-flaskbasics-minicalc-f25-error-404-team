@@ -5,3 +5,8 @@ def average_length(user_string):
     else:
         avg = 0
     return avg
+
+def hex(user_string: str):
+    bytes = user_string.encode("utf-8")
+    hex = bytes.hex()
+    return hex

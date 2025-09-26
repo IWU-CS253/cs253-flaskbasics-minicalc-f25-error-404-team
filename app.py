@@ -30,5 +30,14 @@ def wordstatsindex():
     else:
         return render_template('wordstats.html', average_length=None)
 
+@app.route("/hex", methods=["GET", "POST"])
+def hexindex():
+    if request.method == 'POST':
+        user_string = request.form['user_string']
+        hex_word = wordstats.hex(user_string)
+        return render_template('wordstats.html', hex=hex_word)
+    else:
+        return render_template('wordstats.html', average_length=None)
+
 if __name__ == '__main__':
     app.run()
