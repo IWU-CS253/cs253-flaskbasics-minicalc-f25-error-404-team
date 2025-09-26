@@ -16,8 +16,9 @@ def calc():
         current_value = request.form.get('current_value', '')
         num = request.form.get('num', None)
         clear = request.form.get('clear', None)
+        sqrt = request.form.get('sqrt', None)
 
-        current_value = calculate(current_value, num, clear)  # Use the calculate function
+        current_value = calculate(current_value, num, clear, sqrt)  # Use the calculate function
 
     return render_template('calc.html', current_value=current_value)
 
