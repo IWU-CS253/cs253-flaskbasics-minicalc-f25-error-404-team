@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from calc import calculate
 import wordstats
 
+
 app = Flask(__name__)
 
 
