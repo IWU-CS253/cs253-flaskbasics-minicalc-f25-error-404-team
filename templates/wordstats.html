@@ -8,16 +8,26 @@
         <input type="submit" value="Calculate">
     </form>
 
-    {% if average_length is not none %}
+    <form action="/hex" method="post">
+        <label for="user_string">Enter your string:</label>
+        <input type="text" id="user_string" name="user_string" required>
+        <input type="submit" value="Convert to Hex">
+    </form>
+
+    {% if average_length %}
         <p>Average word length: {{ average_length }}</p>
     {% endif %}
 
-    {% if char_count is not none %}
-        <p>The character count is {{char_count}}</p>
+    {% if char_count %}
+        <p>The character count: {{char_count}}</p>
     {% endif %}
 
-    {% if word_count is not none %}
-        <p>The word count is {{word_count}}</p>
+    {% if word_count %}
+        <p>The word count: {{word_count}}</p>
+    {% endif %}
+
+    {% if hex %}
+        <p>Word in hex: {{ hex }}</p>
     {% endif %}
 
 {% endblock %}
